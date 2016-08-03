@@ -3,6 +3,10 @@ body {
 	padding-top: 50px;
 }
 
+a {
+	outline: none;
+}
+
 
 /* selectors for navbar */
 nav {
