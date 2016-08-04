@@ -1,6 +1,7 @@
 /* selectors for all HTML tags across all pages */
 body {
 	padding-top: 50px;
+	opacity: 100% !important;
 }
 
 a {
@@ -72,6 +73,13 @@ aside {
 	width: 300px;
 	margin: 10px 25px 10px 0px;
 	float: left;
+
+	transition: all 0.5s ease;
+}
+
+#profile_image:hover {
+	width: 100%;
+	float: none;
 }
 
 
@@ -227,20 +235,21 @@ textarea {
 }
 
 @keyframes move_in_left {
-	0%   {transform: translate3d(-1000px, 0, 0);}
-	80%  {transform: translate3d(0, 0, 0);}
+	0%   {visibility: hidden; transform: translate3d(-1000px, 0, 0);}
+	19%  {visibility: hidden; transform: translate3d(-1000px, 0, 0);}
+	20%  {visibility: visible; transform: translate3d(-1000px, 0, 0);}
 	100% {transform: translate3d(0, 0, 0);}
 }
 
 .fade-in {
 	animation-name: fade_in;
-    animation-duration: 1.3s;
+    animation-duration: 0.8s;
     animation-timing-function: ease;
 }
 
 @keyframes fade_in {
-	0%   {opacity: 0;}
-	100% {opacity: 1;}
+	0%   {opacity: 0; transform: rotate3d(0, 1, 0, 90deg);}
+	100% {opacity: 1; transform: rotate3d(0, 1, 0, 0deg);}
 }
 
 .fade-in-later {
