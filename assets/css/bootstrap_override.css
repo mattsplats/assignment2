@@ -8,13 +8,11 @@ a {
 }
 
 
-/* selectors for navbar */
+/* selectors for all pages */
 nav {
 	font-size: 150%;
 }
 
-
-/* selectors for main content */
 section p {
 	line-height: 190%;
 }
@@ -167,6 +165,10 @@ textarea {
 		width: 275px;
 		height: 205px;
 	}
+
+	section {
+	    animation-duration: 0s !important;
+	}
 }
 
 @media screen and (max-width: 640px) {
@@ -185,6 +187,46 @@ textarea {
 		margin: 10px 0;
 	}
 }
+
+
+/* Animations */
+.move-in-left {
+	position: relative;
+	animation-name: move_in_left;
+    animation-duration: 0.8s;
+    animation-delay: 0s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes move_in_left {
+	0%   {left: -800px;}
+	50%  {left: -800px;}
+	100% {left: 0px;}
+}
+
+.fade-in {
+	animation-name: fade_in;
+    animation-duration: 1.3s;
+    animation-timing-function: ease;
+}
+
+@keyframes fade_in {
+	0%   {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+.fade-in-later {
+	animation-name: fade_in_later;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+@keyframes fade_in_later {
+	0%   {opacity: 0;}
+	50%	 {opacity: 0;}
+	100% {opacity: 1;}
+}
+
 
 
 /* Bootstrap sticky footer - see https://getbootstrap.com/examples/sticky-footer/ */
