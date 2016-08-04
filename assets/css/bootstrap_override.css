@@ -9,8 +9,14 @@ a {
 
 
 /* selectors for all pages */
-nav {
-	font-size: 150%;
+.navbar-brand {
+	font-size: 1.75em !important;
+	font-weight: bold;
+}
+
+.nav li {
+	font-size: 1.25em !important;
+	font-weight: normal;
 }
 
 section p {
@@ -21,19 +27,43 @@ aside {
 	margin-top: 5px;
 }
 
-aside img {
-	transition: all 0.2s linear;
-}
-
-aside img:hover {
-	opacity: 0.7;
-}
-
-#social_images {
+#social_image_block {
 	margin-top: 15px;
 
 	display: flex;
 	justify-content: space-between;
+}
+
+.social_image {
+	position: relative;
+}
+
+.social_image div {
+	position: absolute;
+	left: -50px;
+	top: 68px;
+	width: 164px;
+
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.2s linear;
+
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.social_image:hover div {
+	opacity: 1;
+	visibility: visible;
+}
+
+.social_image img {
+	transition: all 0.1s linear;
+}
+
+.social_image img:hover {
+	opacity: 0.5;
 }
 
 
@@ -129,11 +159,11 @@ textarea {
 }
 
 @media screen and (max-width: 991px) {
-	#social_images {
+	#social_image_block {
 		justify-content: flex-start;
 	}
 
-	#social_images img {
+	.social_image {
 		margin-right: 10px;
 	}
 
@@ -191,17 +221,14 @@ textarea {
 
 /* Animations */
 .move-in-left {
-	position: relative;
 	animation-name: move_in_left;
     animation-duration: 0.8s;
-    animation-delay: 0s;
     animation-timing-function: ease-out;
 }
 
 @keyframes move_in_left {
-	0%   {left: -800px;}
-	50%  {left: -800px;}
-	100% {left: 0px;}
+	30%  {transform: translate3d(-1000px, 0, 0);}
+	90%  {transform: translate3d(0, 0, 0);}
 }
 
 .fade-in {
@@ -223,8 +250,8 @@ textarea {
 
 @keyframes fade_in_later {
 	0%   {opacity: 0;}
-	50%	 {opacity: 0;}
-	100% {opacity: 1;}
+	30%	 {opacity: 0;}
+	80%  {opacity: 1;}
 }
 
 
