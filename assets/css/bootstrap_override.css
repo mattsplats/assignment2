@@ -227,8 +227,9 @@ textarea {
 }
 
 @keyframes move_in_left {
-	30%  {transform: translate3d(-1000px, 0, 0);}
-	90%  {transform: translate3d(0, 0, 0);}
+	0%   {transform: translate3d(-1000px, 0, 0);}
+	80%  {transform: translate3d(0, 0, 0);}
+	100% {transform: translate3d(0, 0, 0);}
 }
 
 .fade-in {
@@ -252,8 +253,8 @@ textarea {
 	0%   {opacity: 0;}
 	30%	 {opacity: 0;}
 	80%  {opacity: 1;}
+	100% {opacity: 1;}
 }
-
 
 
 /* Bootstrap sticky footer - see https://getbootstrap.com/examples/sticky-footer/ */
